@@ -10,16 +10,3 @@ PDF files were  downloaded and processed to obtain a dataset on various machine 
 Libraries: 
 I used different pyton libraries especially in NLP. 
 Wordcloud, pandas, sklearn(CountVectorizer, LDA), numpy, matplotlib, 
-
-
-
-
-
-
-
-
-
-
-
-
-*This project is based on a DataCamp project with the same name*(https://app.datacamp.com/learn/projects/158)
