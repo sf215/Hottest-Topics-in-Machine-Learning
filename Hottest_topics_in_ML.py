@@ -1,7 +1,9 @@
 
 # ## 1. Loading the NIPS papers
 
-#First, I explored the CSV file to determine what type of data I can use for the analysis and how it is structured. A research paper typically consists of a title, an abstract and the main text. Other data such as figures and tables were not extracted from the PDF files. Each paper discusses a novel technique or improvement. In this analysis, I focused on analyzing these papers with natural language processing methods.
+#First, I explored the CSV file to determine what type of data I can use for the analysis and how it is structured. 
+# A research paper typically consists of a title, an abstract and the main text. Other data such as figures and tables were not extracted from the PDF files.
+# Each paper discusses a novel technique or improvement. In this analysis, I focused on analyzing these papers with natural language processing methods.
 
 
 
@@ -54,7 +56,9 @@ plt.title('Machine Learning Publications since 1987')
 
 # ## 4. Preprocessing the text data
 
-# Let's now analyze the titles of the different papers to identify machine learning trends. First, I performed some simple preprocessing on the titles in order to make them more amenable for analysis, use a regular expression to remove any punctuation in the title. Then performed lowercasing and then print the titles of the first rows before and after applying the modification.
+# Let's now analyze the titles of the different papers to identify machine learning trends.
+# First, I performed some simple preprocessing on the titles in order to make them more amenable for analysis, use a regular expression to remove any punctuation in the title. 
+# Then performed lowercasing and then print the titles of the first rows before and after applying the modification.
 
 
 
@@ -77,7 +81,8 @@ papers.head()
 
 # ## 5.  A word cloud to visualize the preprocessed text data
 
-# In order to verify whether the preprocessing happened correctly, we can make a word cloud of the titles of the research papers. This will give us a visual representation of the most common words. Visualisation is key to understanding whether we are still on the right track! In addition, it allows us to verify whether we need additional preprocessing before further analyzing the text data.
+# In order to verify whether the preprocessing happened correctly, we can make a word cloud of the titles of the research papers.
+# This will give us a visual representation of the most common words. Visualisation is key to understanding whether we are still on the right track! In addition, it allows us to verify whether we need additional preprocessing before further analyzing the text data.
 #  Andreas Mueller's wordcloud library ("http://amueller.github.io/word_cloud/") is used here.
 
 
@@ -101,8 +106,10 @@ wordcloud.to_image()
 
 # ## 6.  Prepare the text for LDA analysis
 
-# The main text analysis method that I used is latent Dirichlet allocation (LDA). LDA is able to perform topic detection on large document sets, determining what the main 'topics' are in a large unlabeled set of texts. 
-# LDA does not work directly on text data. First, it is necessary to convert the documents into a simple vector representation. This representation will then be used by LDA to determine the topics. Each entry of a 'document vector' will correspond with the number of times a word occurred in the document. 
+# The main text analysis method that I used is latent Dirichlet allocation (LDA).
+# LDA is able to perform topic detection on large document sets, determining what the main 'topics' are in a large unlabeled set of texts. 
+# LDA does not work directly on text data. First, it is necessary to convert the documents into a simple vector representation. 
+# This representation will then be used by LDA to determine the topics. Each entry of a 'document vector' will correspond with the number of times a word occurred in the document. 
 
 
 # Load the library with the CountVectorizer method
@@ -178,5 +185,6 @@ print_topics(lda, count_vectorizer, number_words)
 
 
 # ## 8. The future of machine learning
-# Machine learning has become increasingly popular over the past years. The number of NIPS conference papers has risen exponentially, and people are continuously looking for ways on how they can incorporate machine learning into their products and services.
+# Machine learning has become increasingly popular over the past years. 
+# The number of NIPS conference papers has risen exponentially, and people are continuously looking for ways on how they can incorporate machine learning into their products and services.
 
